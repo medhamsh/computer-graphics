@@ -24,6 +24,9 @@ RUN make
 RUN rm -rf /var/www/*
 RUN cp -r ../build/* /var/www/
 
+EXPOSE 80
+
 #Usage: Setting permissions in /var/www
 RUN chmod -R 755 /var/www/*
 
+CMD /usr/sbin/apache2ctl -D FOREGROUND
