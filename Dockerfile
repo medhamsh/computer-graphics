@@ -25,6 +25,7 @@ RUN rm -rf /var/www/*
 RUN cp -r ../build/* /var/www/
 
 EXPOSE 80
+EXPOSE 443
 
 #Usage: Setting permissions in /var/www
 RUN chmod -R 755 /var/www/*
